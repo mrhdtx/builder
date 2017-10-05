@@ -1,0 +1,463 @@
+/*
+html{
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+*/
+
+/* ==========================================================================
+   Author's custom styles  - Here for our CSS styling
+   ========================================================================== */
+
+/* GENERAL STYLINGS */
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.clear,
+.clear::after{
+   content: '';
+   clear: both;
+   display: block;
+}
+
+
+html{
+        font-size: 62.5%;
+        -webkit-tap-highlight-color: transparent;
+   }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body > section {
+    /*height: 500px;*/
+    clear: both;
+}
+
+
+/* h1, h2, h3, h4, h5, h6 Styling */
+h1{ font-size: 3.6em;}
+h2{ font-size: 2.4em;}
+h3{ font-size: 2.0em;}
+h4{ font-size: 1.8em;}
+h5{ font-size: 1.6em;}
+h6{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+h1,h2,h3,h4,h5,h6{
+    color: #15365b;
+}
+
+body > section > h2{
+    padding-top: 20px!important;
+    font-size: 2.4rem;
+    text-shadow: 1px 1px #15365b,
+                 2px 2px #15365b;
+}
+
+/* Line separator after all h2 element */
+h2:after{
+    content: "";
+    height: 5px;
+    width: 40px;
+    background-color: #15365b;
+    display: block;   /* To see the line */
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+
+/*** NAVIGATIONAL MENU ***/
+
+/* Modify bootstrap .navbar-default class */
+.navbar-default{
+    box-shadow: none;
+    background-color: rgba(96, 105, 73, .2);
+    border: none;
+    min-height: 80px;
+    padding-top: 20px;
+}
+
+.navbar .navbar-header button{
+    border: 2px solid red;
+}
+
+.navbar .navbar-header button:hover,
+.navbar .navbar-header button:focus{
+    background-color: transparent;
+}
+
+.navbar .navbar-header button span{
+    background-color: red!important;
+}
+
+/* Styling the nav menu link */
+.nav > li > a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 1px black;
+    -webkit-text-shadow: 1px 1px 1px black;
+    -moz-text-shadow: 2px 2px 3px black;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: transparent;
+}
+
+/* Utilizing bootstrap scrollspy, the current active menu item can be highlighted  */
+.nav > li.active{
+    background-color: rgba(69, 75, 52, .7);
+    transition: .3s all ease;
+}
+
+
+/* Section: Home - Styling the home background image */
+#home .container-fluid .row .home-img{
+    padding: 0!important;
+}
+
+#home .container-fluid .row .home-img img{
+    position: relative;
+}
+
+#home .container-fluid .row .home-img h3{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(255,255,255,0.7);  /* Text Shadow Glowing Effect */
+}
+
+
+/* Section: About - Styling Company General Information */
+#about{background: linear-gradient(to bottom, #d0d5c3 0%, #6e7755 100%);}
+
+#about h2{margin-top: 0;}
+
+#about h2:after{margin-bottom: 25px;}
+
+#about .aboutus .left,
+#about .aboutus .right{
+    padding: 2px;
+}
+
+#about .aboutus p{
+    line-height: 1.2;
+    font-size: .7em;
+    color: #fff;
+    text-shadow: 0px 2px 3px #333;
+}
+
+/* Living room image will not be display in small screen device */
+#about .image{display: none;}
+
+
+
+/*  Section: Gallery - Styling Model Homes Information Card */
+#gallery{height: 1000px;}
+
+#gallery h2:after{margin-bottom: 25px;}
+
+#gallery .model-home{margin-bottom: 10px;}
+
+#gallery .model-home .model-info{
+    padding: 10px 0;
+    background: linear-gradient(to bottom, #d0d5c3 0%, #6e7755 100%);
+
+    /* Bottom box shadowing appearance */
+    -webkit-box-shadow: 0 8px 6px -4px black;
+   -moz-box-shadow: 0 8px 6px -4px black;
+    box-shadow: 0 8px 6px -4px black;
+}
+
+#gallery .model-home .model-caption{text-shadow: 0px 2px 3px #333;}
+
+#gallery .model-home .model-info p{color: #fff;}
+
+#gallery .model-home .model-info p > span{float: right;}
+
+#gallery .model-home img{margin: 0 auto;}
+
+
+
+/* Section: Location - Styling Google Map and Office Location Information */
+#location{height: 500px;}
+
+#location h2:after{margin-bottom: 40px;}
+
+#location .well{background-color:  #d0d5c3;}
+
+/* Google Map */
+#location iframe.map{
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+/* Company Office Information */
+#location .address{
+    height: 450px;
+    color: #000;
+    background-image: url("../img/office.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+}
+
+#location .address .address-image{
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: table;
+}
+
+#location .address .address-center{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
+#location .address .address-center h4{
+    color: #fff;
+    padding: 0 5px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px rgba(250,250,250,0.7);
+}
+
+
+/* Section: Contact - Styling Contact Form */
+#contact{height: 550px;}
+
+#contact h2:after{margin-bottom: 20px;}
+
+#contact .contactus{
+    margin-top: 15px;
+    height: 423px;
+}
+
+#contact .contactus form{
+    border: 2px solid #15365b;
+    border-radius: 10px;
+    padding: 25px 25px 0 25px;
+
+}
+
+#contact .contactus p{font-size: 1em;}
+
+
+
+/* Footer */
+footer{
+    background: linear-gradient(to bottom, #d0d5c3 0%, #6e7755 100%);
+    margin-top: 20px;
+    position: relative;
+}
+
+footer p{
+    font-weight: bold;
+    background-color: #444;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(250,250,250,0.4) 0px 1px 3px;
+}
+
+footer .copyright{
+    text-align: center;
+    font-size: .9em;
+}
+
+.topBtn {
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 9;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.topBtn:hover {
+  background-color: transparent;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media(max-width: 767px){}
+
+
+@media screen and (min-width: 405px){
+
+
+      body > section > h2{
+          font-size: 2.4em;
+      }
+
+      /* Section: Home */
+      #home .container-fluid .row .home-img h3{font-size: 1.8em;}
+    
+    .topBtn {right: 15px;}
+}
+
+
+@media(min-width: 768px){
+
+       .navbar-default{
+            background-color: transparent;
+       }
+    
+      /* Section: Home */
+      #home{overflow: hidden;}
+
+      #home .container-fluid .row .home-img h3{font-size: 2.6em;}
+
+      /* Section: About */
+      #about{height: 550px;}
+
+      #about .aboutus{padding-top: 30px;}
+
+      #about .aboutus .left:before,
+      #about .aboutus .right:before{
+          content: '';
+          width: 100px;
+          height: 200px;
+      }
+
+      #about .aboutus .left:before{float: right;}
+
+      #about .aboutus .right:before{float: left;}
+
+      #about .aboutus .left,
+      #about .aboutus .right{
+          float: left;
+          width: 50%;
+          padding: 0 6px;
+      }
+
+      #about .aboutus p{
+          color: #fff;
+          line-height: 1.2;
+          font-size: 1.2em;
+          font-weight: 300;
+          text-shadow: 0px 2px 3px #333;
+      }
+
+      #about .image{
+          display: block;
+          height: 200px;
+          width: 180px;
+          background: url(../img/about.jpg) no-repeat center center transparent;
+          background-size: auto 100%;
+          margin: 0 auto;
+          border-radius: 10px;
+      }
+
+
+      /* Section: Gallery */
+      #gallery{height: 350px;}
+
+      #gallery .model-home{margin-top: 10px;}
+
+
+      /* Section: Contact */
+      #contact{
+          background-image: url("../img/contact.jpg");
+          background-size: cover;
+          background-position: center center;
+          margin-top: 0;
+          padding-top: 20px;
+      }
+
+      #contact h2{
+           color: #fff;
+          text-shadow: 0px 0px 10px rgba(255,255,255,0.7);  /* Text Shadow Glowing Effect */
+      }
+
+      #contact h2:after{background-color: #fff;}
+
+      #contact .contactus form{
+          padding: 40px 40px 40px 0;
+          background-color: rgba(21, 54, 91,.4);
+          border: none;
+      }
+
+      #contact .contactus p{
+          font-size: 1.3em;
+          color: #fff;
+      }
+
+      .contactus .form-group > label,
+      .contactus .form-group .checkbox > label{
+          color: #fff;
+      }
+
+      /* Section: Footer */
+      footer{
+          margin-top: 0;
+      }
+
+      footer .copyright{
+          font-size: 1.5em;
+      }
+    
+     .topBtn {right: 30px;}
+
+}
+
+@media(min-width: 992px){
+
+      /* Section: Home */
+      #home .container-fluid .row .home-img h3{
+          font-size: 3em;
+      }
+
+      /* Section: Gallery */
+      #gallery .model-home .model-info p{
+          font-size: .85em;
+      }
+
+}
+
+@media(min-width: 1200px){
+
+      /* Section: About */
+      #about .aboutus p{
+          line-height: 1.5;
+          font-size: 1.4em;
+      }
+
+}
